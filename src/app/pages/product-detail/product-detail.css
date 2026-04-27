@@ -1,0 +1,86 @@
+.detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #e94560;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.detail-image img {
+  width: 100%;
+  border-right: 12px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.category {
+  font-size: 0.8rem;
+  color: #e94560;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.detail-info h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111;
+  margin: 0.5rem 0 1rem;
+}
+
+.description {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 1rem;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background: #e94560;
+}
+.btn-add.added {
+  background: #27ae60;
+}
+
+.not-found {
+  text-align: center;
+  padding: 4rem;
+  color: #888;
+}

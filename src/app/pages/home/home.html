@@ -1,0 +1,17 @@
+<section class="hero">
+	<div class="hero-content">
+		<h1>La mode qui vous ressemble</h1>
+		<p>Découvrez notre nouvelle collection printemps-été</p>
+		<a routerLink="/shop" class="btn-hero">Voir la boutique</a>
+	</div>
+</section>
+
+<section class="featured">
+	<h2>Nos coups de coeur</h2>
+	<div class="products-grid">
+		@for (product of featuredProducts; track product.id) {
+			<app-product-card [product]="product"></app-product-card>
+		}
+	</div>
+	<a routerLink="/shop" class="btn-secondary">Voir tous les produits</a>
+</section>

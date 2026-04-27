@@ -1,0 +1,17 @@
+<div class="card">
+	<a [routerLink]="['/product', product.id]">
+		<img [src]="product.image" [alt]="product.name" class="card-img"/>
+		<div class="card-body">
+			<span class="category">{{ product.category }}</span>
+			<h3>{{ product.name }}</h3>
+			<p class="price">{{ product.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+		</div>
+	</a>
+	<button class="btn-add" (click)="addToCart()" [class.added]="added">
+		@if (added) {
+			Ajouté !
+		} @else {
+			Ajouter au panier
+		}
+	</button>
+</div>

@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <a class="logo" routerLink="/">StyleShop</a>
+  <div class="nav-links">
+    <a routerLink="/">Accueil</a>
+    <a routerLink="/shop">Boutique</a>
+    <a routerLink="/login">Connexion</a>
+    <a routerLink="/cart" class="cart-btn">
+      Panier
+      @if (cartService.getTotalCount() > 0) {
+        <span class="badge">{{ cartService.getTotalCount() }}</span>
+      }
+    </a>
+  </div>
+</nav>

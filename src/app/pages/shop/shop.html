@@ -1,0 +1,20 @@
+<div class="shop-page">
+  <div class="shop-header">
+    <h1>Boutique</h1>
+    <p>{{ filteredProducts.length }} produit(s)</p>
+  </div>
+
+  <div class="filters">
+    @for (cat of categories; track cat) {
+      <button class="filter-btn" [class.active]="selectedCategory === cat" (click)="filterBy(cat)">
+        {{ cat }}
+      </button>
+    }
+  </div>
+
+  <div class="products-grid">
+    @for (product of filteredProducts; track product.id) {
+      <app-product-card [product]="product"></app-product-card>
+    }
+  </div>
+</div>
