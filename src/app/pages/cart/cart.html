@@ -15,14 +15,13 @@
             <div class="item-info">
               <h3>{{ item.product.name }}</h3>
               <p class="item-category">{{ item.product.category }}</p>
-              <p class="item-price">
-                {{ item.product.price | currency: 'EUR' : 'symbol' : '1.2-2' }} x
-                {{ item.quantity }}
-              </p>
+              <p class="item-price">{{ formatPrice(item.product.price) }} x {{ item.quantity }}</p>
             </div>
             <div class="item-total">
-              <p>{{ item.product.price * item.quantity | currency: 'EUR' : 'symbol' : '1.2-2' }}</p>
-              <button class="btn-remove" (click)="remove(item.product.id)">Supprimer</button>
+              <p>{{ formatPrice(item.product.price * item.quantity) }}</p>
+              <button class="btn-remove" (click)="remove(item.product.id)" title="Supprimer">
+                <i class="fas fa-trash"></i>
+              </button>
             </div>
           </div>
         }
@@ -32,7 +31,7 @@
         <h2>Récapitulatif</h2>
         <div class="summary-line">
           <span>Articles ({{ cartService.getTotalCount() }})</span>
-          <span>{{ cartService.getTotalPrice() | currency: 'EUR' : 'symbol' : '1.2-2' }}</span>
+          <span>{{ formatPrice(cartService.getTotalPrice()) }}</span>
         </div>
         <div class="summary-line">
           <span>Livraison</span>
@@ -40,7 +39,7 @@
         </div>
         <div class="summary-total">
           <span>Total</span>
-          <span>{{ cartService.getTotalPrice() | currency: 'EUR' : 'symbol' : '1.2-2' }}</span>
+          <span>{{ formatPrice(cartService.getTotalPrice()) }}</span>
         </div>
         <button class="btn-checkout">Passer la commande</button>
         <a routerLink="/shop" class="btn-continue">Continuer mes achats</a>

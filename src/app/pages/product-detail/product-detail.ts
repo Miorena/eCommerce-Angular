@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { CurrencyPipe } from '@angular/common';
 import { ProductService } from '../../services/product';
 import { CartService } from '../../services/cart';
 import { Product } from '../../models/product.model';
@@ -8,7 +7,7 @@ import { Product } from '../../models/product.model';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [RouterLink, CurrencyPipe],
+  imports: [RouterLink],
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.css',
 })
@@ -31,5 +30,12 @@ export class ProductDetailComponent {
       this.added = true;
       setTimeout(() => (this.added = false), 1500);
     }
+  }
+
+  formatPrice(price: number): string {
+    return new Intl.NumberFormat('fr-FR', {
+      style: 'currency',
+      currency: 'EUR',
+    }).format(price);
   }
 }

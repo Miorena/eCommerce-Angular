@@ -1,6 +1,6 @@
 <div class="detail-page">
   @if (product) {
-    <a routerLink="/shop" class="back-link">Retour à la boutique</a>
+    <a routerLink="/shop" class="back-link"><i class="fas fa-arrow-left"></i></a>
 
     <div class="detail-container">
       <div class="detail-image">
@@ -11,7 +11,7 @@
         <span class="category">{{ product.category }}</span>
         <h1>{{ product.name }}</h1>
         <p class="description">{{ product.description }}</p>
-        <p class="price">{{ product.price | currency: 'EUR' : 'symbol' : '1.2-2' }}</p>
+        <p class="price">{{ formatPrice(product.price) }}</p>
 
         <button class="btn-add" (click)="addToCart()" [class.added]="added">
           @if (added) {
@@ -25,7 +25,7 @@
   } @else {
     <div class="not-found">
       <p>Produit introuvable</p>
-      <a routerLink="/shop" class="back-link">Retour à la boutique</a>
+      <a routerLink="/shop" class="back-link"><i class="fas fa-arrow-left"></i></a>
     </div>
   }
 </div>

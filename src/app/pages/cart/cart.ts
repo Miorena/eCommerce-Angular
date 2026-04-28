@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CurrencyPipe } from '@angular/common';
-import { CartService, CartItem } from '../../services/cart';
+import { CartService } from '../../services/cart';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [RouterLink, CurrencyPipe],
+  imports: [RouterLink],
   templateUrl: './cart.html',
   styleUrl: './cart.css',
 })
@@ -15,5 +14,12 @@ export class CartComponent {
 
   remove(productId: number): void {
     this.cartService.removeFromCart(productId);
+  }
+
+  formatPrice(price: number): string {
+    return new Intl.NumberFormat('fr-FR', {
+      style: 'currency',
+      currency: 'EUR',
+    }).format(price);
   }
 }
