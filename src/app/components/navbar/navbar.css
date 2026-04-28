@@ -23,14 +23,16 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .nav-links a {
   color: #ccc;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   transition: color var(--transition);
+	display: flex;
+	align-items: center;
 }
 
 .nav-links a:hover {
@@ -56,3 +58,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.logout-btn {
+  cursor: pointer;
+  color: #ccc;
+  font-size: 1.1rem;
+  transition: color var(--transition);
+}
+
+.logout-btn:hover { color: #e74c3c; }

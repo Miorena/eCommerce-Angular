@@ -1,50 +1,49 @@
 <div class="login-page">
   <div class="login-card">
-    <h1>{{ isRegister ? 'Créer un compte' : 'Connexion' }}</h1>
-    <p class="subtitle">
-      {{ isRegister ? 'Rejoignez StyleShop dès maintenant' : 'Bienvenue sur StyleShop' }}
-    </p>
+    <h1>Velène</h1>
+    <p class="subtitle">Connectez-vous pour accéder à la boutique</p>
 
     <form (ngSubmit)="submit()">
-      @if (isRegister) {
-        <div class="form-group">
-          <label for="name">Nom complet</label>
-          <input id="name" type="text" placeholder="Votre nom" />
-        </div>
-      }
-
       <div class="form-group">
-        <label for="email">Adresse email</label>
+        <label for="username">Identifiant</label>
         <input
-          id="email"
-          type="email"
-          placeholder="exemple@email.com"
-          [(ngModel)]="email"
-          name="email"
-        />
+          id="username"
+          type="text"
+          placeholder="Votre identifiant"
+          [(ngModel)]="username"
+          name="username"/>
       </div>
 
       <div class="form-group">
         <label for="password">Mot de passe</label>
-        <input
-          id="password"
-          type="password"
-          placeholder="Votre mot de passe"
-          [(ngModel)]="password"
-          name="password"
-        />
+        <div class="password-wrapper">
+          <input
+            id="password"
+            [type]="showPassword ? 'text' : 'password'"
+            placeholder="Votre mot de passe"
+            [(ngModel)]="password"
+            name="password"/>
+          <button type="button" class="toggle-eye" (click)="togglePassword()">
+            <i [class]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+          </button>
+        </div>
       </div>
 
-      <button type="submit" class="btn-submit">
-        {{ isRegister ? 'Créer mon compte' : 'Se connecter' }}
-      </button>
-    </form>
+      <div class="remember-row">
+        <label class="remember-label">
+          <input
+            type="checkbox"
+            [(ngModel)]="rememberMe"
+            name="rememberMe"/>
+          <span>Se souvenir de moi</span>
+        </label>
+      </div>
 
-    <p class="toggle-text">
-      {{ isRegister ? 'Déjà un compte ?' : 'Pas encore de compte ?' }}
-      <button class="btn-toggle" (click)="isRegister = !isRegister">
-        {{ isRegister ? 'Se connecter' : "S'inscrire" }}
-      </button>
-    </p>
+      @if (error) {
+        <p class="error-msg">Identifiant ou mot de passe incorrect.</p>
+      }
+
+      <button type="submit" class="btn-submit">Se connecter</button>
+    </form>
   </div>
 </div>

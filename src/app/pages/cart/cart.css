@@ -12,8 +12,15 @@
   letter-spacing: -1px;
 }
 
-.empty-cart { text-align: center; padding: 5rem 2rem; color: var(--text-muted); }
-.empty-cart p { font-size: 1.1rem; margin-bottom: 2rem; }
+.empty-cart {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--text-muted);
+}
+.empty-cart p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
 
 .btn-shop {
   background: var(--primary);
@@ -27,7 +34,9 @@
   transition: background var(--transition);
 }
 
-.btn-shop:hover { background: var(--primary-dark); }
+.btn-shop:hover {
+  background: var(--primary-dark);
+}
 
 .cart-layout {
   display: grid;
@@ -52,11 +61,32 @@
   border-radius: var(--radius-sm);
 }
 
-.item-info h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
-.item-category { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
-.item-price { font-size: 0.9rem; color: var(--text-muted); }
-.item-total { text-align: right; }
-.item-total p { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; }
+.item-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+.item-category {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.item-price {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.item-total {
+  text-align: right;
+}
+.item-total p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
 
 .btn-remove {
   background: none;
@@ -68,7 +98,9 @@
   padding: 0;
 }
 
-.btn-remove:hover { color: #e74c3c; }
+.btn-remove:hover {
+  color: #e74c3c;
+}
 
 .cart-summary {
   background: white;
@@ -77,10 +109,15 @@
   position: sticky;
   top: 100px;
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.cart-summary h2 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 1.5rem; }
+.cart-summary h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
 
 .summary-line {
   display: flex;
@@ -117,7 +154,9 @@
   transition: background var(--transition);
 }
 
-.btn-checkout:hover { background: var(--primary-dark); }
+.btn-checkout:hover {
+  background: var(--primary-dark);
+}
 
 .btn-continue {
   display: block;
@@ -128,4 +167,6 @@
   transition: color var(--transition);
 }
 
-.btn-continue:hover { color: var(--text); }
+.btn-continue:hover {
+  color: var(--text);
+}

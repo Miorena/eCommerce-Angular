@@ -1,14 +1,19 @@
 <nav class="navbar">
   <a class="logo" routerLink="/">Velène</a>
-  <div class="nav-links">
-    <a routerLink="/">Accueil</a>
-    <a routerLink="/shop">Boutique</a>
-    <a routerLink="/login">Connexion</a>
-    <a routerLink="/cart" class="cart-btn">
-      Panier
-      @if (cartService.getTotalCount() > 0) {
-        <span class="badge">{{ cartService.getTotalCount() }}</span>
-      }
-    </a>
-  </div>
+
+  @if (authService.isLoggedIn()) {
+    <div class="nav-links">
+      <a routerLink="/" title="Accueil"><i class="fas fa-house"></i></a>
+      <a routerLink="/shop" title="Boutique"><i class="fas fa-shirt"></i></a>
+      <a routerLink="/cart" class="cart-btn" title="Panier">
+        <i class="fas fa-bag-shopping"></i>
+        @if (cartService.getTotalCount() > 0) {
+          <span class="badge">{{ cartService.getTotalCount() }}</span>
+        }
+      </a>
+      <a (click)="logout()" title="Déconnexion" class="logout-btn">
+        <i class="fas fa-right-from-bracket"></i>
+      </a>
+    </div>
+  }
 </nav>

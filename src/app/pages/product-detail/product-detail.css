@@ -15,7 +15,9 @@
   transition: color var(--transition);
 }
 
-.back-link:hover { color: var(--primary); }
+.back-link:hover {
+  color: var(--primary);
+}
 
 .detail-container {
   display: grid;
@@ -74,10 +76,22 @@
   cursor: pointer;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  transition: background var(--transition), color var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition);
 }
 
-.btn-add:hover { background: var(--primary); color: var(--dark); }
-.btn-add.added { background: var(--success); color: white; }
+.btn-add:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+.btn-add.added {
+  background: var(--success);
+  color: white;
+}
 
-.not-found { text-align: center; padding: 4rem; color: var(--text-muted); }
+.not-found {
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-muted);
+}

@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-soft) 100%);
+  background: linear-gradient(160deg, var(--dark-soft) 0%, var(--dark) 100%);
   min-height: 88vh;
   display: flex;
   align-items: center;
@@ -17,7 +17,9 @@
   line-height: 1.1;
 }
 
-.hero-content h1 span { color: var(--primary); }
+.hero-content h1 span {
+  color: var(--primary);
+}
 
 .hero-content p {
   font-size: 1.15rem;
@@ -38,11 +40,16 @@
   font-size: 0.95rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  transition: background var(--transition), transform var(--transition);
+  transition:
+    background var(--transition),
+    transform var(--transition);
   display: inline-block;
 }
 
-.btn-hero:hover { background: var(--primary-dark); transform: translateY(-3px); }
+.btn-hero:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
 
 .featured {
   padding: 5rem 2rem;
@@ -86,4 +93,7 @@
   letter-spacing: 0.5px;
 }
 
-.btn-secondary:hover { background: var(--primary); color: var(--dark); }
+.btn-secondary:hover {
+  background: var(--primary);
+  color: var(--dark);
+}

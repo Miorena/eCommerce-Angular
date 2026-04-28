@@ -3,10 +3,12 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .card:hover {
@@ -14,7 +16,11 @@
   box-shadow: var(--shadow-lg);
 }
 
-.card a { text-decoration: none; color: inherit; flex: 1; }
+.card a {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
 
 .card-img {
   width: 100%;
@@ -23,9 +29,13 @@
   transition: transform 0.4s ease;
 }
 
-.card:hover .card-img { transform: scale(1.03); }
+.card:hover .card-img {
+  transform: scale(1.03);
+}
 
-.card-body { padding: 1.2rem; }
+.card-body {
+  padding: 1.2rem;
+}
 
 .category {
   font-size: 0.72rem;
@@ -59,8 +69,16 @@ h3 {
   cursor: pointer;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  transition: background var(--transition), color var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition);
 }
 
-.btn-add:hover { background: var(--primary); color: var(--dark); }
-.btn-add.added { background: var(--success); color: white; }
+.btn-add:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+.btn-add.added {
+  background: var(--success);
+  color: white;
+}

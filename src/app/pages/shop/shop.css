@@ -4,7 +4,9 @@
   padding: 3rem 2rem;
 }
 
-.shop-header { margin-bottom: 2rem; }
+.shop-header {
+  margin-bottom: 2rem;
+}
 
 .shop-header h1 {
   font-size: 2.5rem;
@@ -14,7 +16,10 @@
   letter-spacing: -1px;
 }
 
-.shop-header p { color: var(--text-muted); font-size: 0.95rem; }
+.shop-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
 
 .filters {
   display: flex;
@@ -35,8 +40,16 @@
   font-weight: 500;
 }
 
-.filter-btn:hover { border-color: var(--primary); color: var(--primary); }
-.filter-btn.active { background: var(--primary); border-color: var(--primary); color: var(--dark); font-weight: 700; }
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--dark);
+  font-weight: 700;
+}
 
 .products-grid {
   display: grid;
