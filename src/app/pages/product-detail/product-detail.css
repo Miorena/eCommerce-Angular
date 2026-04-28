@@ -5,82 +5,79 @@
 }
 
 .back-link {
-  display: inline-block;
-  color: #e94560;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-bottom: 2rem;
-  transition: opacity 0.2s;
+  transition: color var(--transition);
 }
 
-.back-link:hover {
-  opacity: 0.7;
-}
+.back-link:hover { color: var(--primary); }
 
 .detail-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: start;
 }
 
 .detail-image img {
   width: 100%;
-  border-right: 12px;
+  border-radius: var(--radius-md);
   object-fit: cover;
-  max-height: 500px;
+  max-height: 520px;
+  box-shadow: var(--shadow-md);
 }
 
-.category {
-  font-size: 0.8rem;
-  color: #e94560;
+.detail-info .category {
+  font-size: 0.75rem;
+  color: var(--primary);
   text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .detail-info h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  color: #111;
+  color: var(--text);
   margin: 0.5rem 0 1rem;
+  letter-spacing: -0.5px;
 }
 
-.description {
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
+.detail-info .description {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
 }
 
-.price {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #111;
+.detail-info .price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text);
   margin-bottom: 2rem;
 }
 
 .btn-add {
   width: 100%;
   padding: 1rem;
-  background: #111;
+  background: var(--dark);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background var(--transition), color var(--transition);
 }
 
-.btn-add:hover {
-  background: #e94560;
-}
-.btn-add.added {
-  background: #27ae60;
-}
+.btn-add:hover { background: var(--primary); color: var(--dark); }
+.btn-add.added { background: var(--success); color: white; }
 
-.not-found {
-  text-align: center;
-  padding: 4rem;
-  color: #888;
-}
+.not-found { text-align: center; padding: 4rem; color: var(--text-muted); }

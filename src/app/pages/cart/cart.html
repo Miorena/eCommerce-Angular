@@ -1,5 +1,5 @@
 <div class="cart-page">
-	<h1>Mon paner</h1>
+	<h1>Mon panier</h1>
 
 	@if (cartService.getItems().length === 0) {
 		<div class="empty-cart">
@@ -39,7 +39,7 @@
 					<span>Total</span>
 					<span>{{ cartService.getTotalPrice() | currency:'EUR':'symbol':'1.2-2' }}</span>
 				</div>
-				<button class="btn-checkout">Passer la command</button>
+				<button class="btn-checkout">Passer la commande</button>
 				<a routerLink="/shop" class="btn-continue">Continuer mes achats</a>
 			</div>
 		</div>

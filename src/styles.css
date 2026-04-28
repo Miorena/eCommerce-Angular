@@ -1,3 +1,22 @@
+:root {
+	--primary: #C9A96E; /* chaud - couleur principale */
+	--primary-dark: #A07840; /* foncé - hover */
+	--dark: #1C1C1E; /* presque noir - fond navbar */
+	--dark-soft: #2C2C2E; /* fonds secondaire sombre */
+	--light: #F9F6F1; /* blanc cassé - fond page */
+	--light-soft: #F0EBE3; /* beige très claire - cartes, inputs */
+	--text: #1C1C1E; /* texte principal */
+	--text-muted: #7A7A7A; /* texte secondaire */
+	--success: #4CAF7D; /* vert confirmation */
+	--radius-sm: 6px;
+	--radius-md: 12px;
+	--radius-lg: 20px;
+	--shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+	--shadow-md: 0 6px 24px rgba(0,0,0,0.10);
+	--shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+	--transition: 0.25s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +25,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fff;
-  color: #111;
+  background: var(--light);
+  color:var(--text);
+	line-height: 1.6;
 }
