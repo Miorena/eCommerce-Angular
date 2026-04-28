@@ -74,7 +74,7 @@ export class ProductService {
       category: 'Pulls',
       image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600',
       description:
-        'Cardigan long en cachemire 2 fils, boutons nacre. Coupe fluide, encolure ronde.',
+        'Cardigan long en cachemire 2 fils. Coupe fluide, encolure ronde.',
     },
     {
       id: 9,
