@@ -11,7 +11,8 @@
           type="text"
           placeholder="Votre identifiant"
           [(ngModel)]="username"
-          name="username"/>
+          name="username"
+        />
       </div>
 
       <div class="form-group">
@@ -22,7 +23,8 @@
             [type]="showPassword ? 'text' : 'password'"
             placeholder="Votre mot de passe"
             [(ngModel)]="password"
-            name="password"/>
+            name="password"
+          />
           <button type="button" class="toggle-eye" (click)="togglePassword()">
             <i [class]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
           </button>
@@ -31,10 +33,7 @@
 
       <div class="remember-row">
         <label class="remember-label">
-          <input
-            type="checkbox"
-            [(ngModel)]="rememberMe"
-            name="rememberMe"/>
+          <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe" />
           <span>Se souvenir de moi</span>
         </label>
       </div>

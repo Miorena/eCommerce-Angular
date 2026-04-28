@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar';
-import { FooterComponent } from "./components/footer/footer";
+import { FooterComponent } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { FooterComponent } from "./components/footer/footer";
   template: `
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
-		<app-footer></app-footer>
-  `
+    <app-footer></app-footer>
+  `,
 })
 export class AppComponent {}

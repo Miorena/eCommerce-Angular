@@ -1,17 +1,17 @@
 <div class="card">
-	<a [routerLink]="['/product', product.id]">
-		<img [src]="product.image" [alt]="product.name" class="card-img"/>
-		<div class="card-body">
-			<span class="category">{{ product.category }}</span>
-			<h3>{{ product.name }}</h3>
-			<p class="price">{{ formatPrice(product.price) }}</p>
-		</div>
-	</a>
-	<button class="btn-add" (click)="addToCart()" [class.added]="added">
-		@if (added) {
-			Ajouté !
-		} @else {
-			Ajouter au panier
-		}
-	</button>
+  <a [routerLink]="['/product', product.id]">
+    <img [src]="product.image" [alt]="product.name" class="card-img" />
+    <div class="card-body">
+      <span class="category">{{ product.category }}</span>
+      <h3>{{ product.name }}</h3>
+      <p class="price">{{ formatPrice(product.price) }}</p>
+    </div>
+  </a>
+  <button class="btn-add" (click)="addToCart()" [class.added]="added">
+    @if (added) {
+      Ajouté !
+    } @else {
+      Ajouter au panier
+    }
+  </button>
 </div>

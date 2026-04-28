@@ -1,31 +1,31 @@
 <div class="detail-page">
-	@if (product) {
-		<a routerLink="/shop" class="back-link">Retour à la boutique</a>
+  @if (product) {
+    <a routerLink="/shop" class="back-link">Retour à la boutique</a>
 
-		<div class="detail-container">
-			<div class="detail-image">
-				<img [src]="product.image" [alt]="product.name"/>
-			</div>
+    <div class="detail-container">
+      <div class="detail-image">
+        <img [src]="product.image" [alt]="product.name" />
+      </div>
 
-			<div class="detail-info">
-				<span class="category">{{ product.category }}</span>
-				<h1>{{ product.name }}</h1>
-				<p class="description">{{ product.description }}</p>
-				<p class="price">{{ product.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+      <div class="detail-info">
+        <span class="category">{{ product.category }}</span>
+        <h1>{{ product.name }}</h1>
+        <p class="description">{{ product.description }}</p>
+        <p class="price">{{ product.price | currency: 'EUR' : 'symbol' : '1.2-2' }}</p>
 
-				<button class="btn-add" (click)="addToCart()" [class.added]="added">
-					@if (added) {
-						Ajouté au panier
-					} @else {
-						Ajouter au panier
-					}
-				</button>
-			</div>
-		</div>
-	} @else {
-		<div class="not-found">
-			<p>Produit introuvable</p>
-			<a routerLink="/shop" class="back-link">Retour à la boutique</a>
-		</div>
-	}
+        <button class="btn-add" (click)="addToCart()" [class.added]="added">
+          @if (added) {
+            Ajouté au panier
+          } @else {
+            Ajouter au panier
+          }
+        </button>
+      </div>
+    </div>
+  } @else {
+    <div class="not-found">
+      <p>Produit introuvable</p>
+      <a routerLink="/shop" class="back-link">Retour à la boutique</a>
+    </div>
+  }
 </div>

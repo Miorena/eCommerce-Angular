@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './login.html',
-  styleUrl: './login.css'
+  styleUrl: './login.css',
 })
 export class LoginComponent implements OnInit {
   username = '';
@@ -17,7 +17,10 @@ export class LoginComponent implements OnInit {
   showPassword = false;
   rememberMe = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     const saved = localStorage.getItem('velene_remember');
@@ -38,10 +41,13 @@ export class LoginComponent implements OnInit {
     if (success) {
       this.error = false;
       if (this.rememberMe) {
-        localStorage.setItem('velene_remember', JSON.stringify({
-          username: this.username,
-          password: this.password
-        }));
+        localStorage.setItem(
+          'velene_remember',
+          JSON.stringify({
+            username: this.username,
+            password: this.password,
+          }),
+        );
       } else {
         localStorage.removeItem('velene_remember');
       }
