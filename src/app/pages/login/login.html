@@ -5,13 +5,13 @@
 
     <form (ngSubmit)="submit()">
       <div class="form-group">
-        <label for="username">Identifiant</label>
+        <label for="mail">Adresse email</label>
         <input
-          id="username"
-          type="text"
-          placeholder="Votre identifiant"
-          [(ngModel)]="username"
-          name="username"
+          id="mail"
+          type="email"
+          placeholder="exemple@email.com"
+          [(ngModel)]="mail"
+          name="mail"
         />
       </div>
 
@@ -39,10 +39,15 @@
       </div>
 
       @if (error) {
-        <p class="error-msg">Identifiant ou mot de passe incorrect.</p>
+        <p class="error-msg">Email ou mot de passe incorrect.</p>
       }
 
       <button type="submit" class="btn-submit">Se connecter</button>
     </form>
+
+    <p class="toggle-text">
+      Pas encore de compte ?
+      <a routerLink="/register" class="btn-toggle">Créer un compte</a>
+    </p>
   </div>
 </div>

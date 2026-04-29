@@ -1,19 +1,33 @@
 <nav class="navbar">
   <a class="logo" routerLink="/">Velène</a>
 
-  @if (authService.isLoggedIn()) {
-    <div class="nav-links">
-      <a routerLink="/" title="Accueil"><i class="fas fa-house"></i></a>
-      <a routerLink="/shop" title="Boutique"><i class="fas fa-shirt"></i></a>
-      <a routerLink="/cart" class="cart-btn" title="Panier">
-        <i class="fas fa-bag-shopping"></i>
-        @if (cartService.getTotalCount() > 0) {
-          <span class="badge">{{ cartService.getTotalCount() }}</span>
+  <div class="nav-links">
+    <a routerLink="/" title="Accueil"><i class="fas fa-house"></i></a>
+    <a routerLink="/shop" title="Boutique"><i class="fas fa-shirt"></i></a>
+    <a routerLink="/cart" class="cart-btn" title="Panier">
+      <i class="fas fa-bag-shopping"></i>
+      @if (cartService.getTotalCount() > 0) {
+        <span class="badge">{{ cartService.getTotalCount() }}</span>
+      }
+    </a>
+
+    @if (authService.isLoggedIn()) {
+      <span class="user-name">
+        {{ authService.getCurrentUser()?.prenom }}
+        @if (authService.isAdmin()) {
+          <span class="admin-badge">Admin</span>
         }
-      </a>
-      <a (click)="logout()" title="Déconnexion" class="logout-btn">
+      </span>
+      <a (click)="logout()" class="logout-btn" title="Déconnexion">
         <i class="fas fa-right-from-bracket"></i>
       </a>
-    </div>
-  }
+    } @else {
+      <a routerLink="/login" class="nav-auth-btn" title="Connexion">
+        <i class="fas fa-user"></i>
+      </a>
+      <a routerLink="/register" class="nav-auth-btn nav-register-btn" title="Créer un compte">
+        <i class="fas fa-user-plus"></i>
+      </a>
+    }
+  </div>
 </nav>

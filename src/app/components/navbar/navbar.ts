@@ -9,17 +9,18 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  styleUrl: './navbar.css'
 })
 export class NavbarComponent {
   constructor(
     public cartService: CartService,
     public authService: AuthService,
-    private router: Router,
+    private router: Router
   ) {}
 
   logout(): void {
     this.authService.logout();
+    this.cartService.loadCart();
     this.router.navigate(['/login']);
   }
 }

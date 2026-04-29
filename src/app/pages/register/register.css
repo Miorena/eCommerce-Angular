@@ -1,4 +1,4 @@
-.login-page {
+.register-page {
   min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
@@ -7,16 +7,16 @@
   padding: 2rem;
 }
 
-.login-card {
+.register-card {
   background: white;
   border-radius: var(--radius-md);
   padding: 3rem;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   box-shadow: var(--shadow-md);
 }
 
-.login-card h1 {
+.register-card h1 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
   font-size: 2rem;
@@ -34,8 +34,14 @@
   text-align: center;
 }
 
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .form-group {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.2rem;
 }
 
 .form-group label {
@@ -48,7 +54,12 @@
   letter-spacing: 0.5px;
 }
 
-.form-group input {
+.required {
+  color: #e74c3c;
+}
+
+.form-group input,
+.form-group select {
   width: 100%;
   padding: 0.85rem 1rem;
   border: 1.5px solid #e8e8e8;
@@ -58,58 +69,14 @@
   background: var(--light);
   box-sizing: border-box;
   color: var(--text);
+  font-family: inherit;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--primary);
   background: white;
-}
-
-.password-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.password-wrapper input {
-  padding-right: 3rem;
-}
-
-.toggle-eye {
-  position: absolute;
-  right: 0.8rem;
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  font-size: 0.95rem;
-  padding: 0;
-  transition: color var(--transition);
-}
-
-.toggle-eye:hover {
-  color: var(--primary);
-}
-
-.remember-row {
-  margin-bottom: 1.2rem;
-}
-
-.remember-label {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  cursor: pointer;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-.remember-label input[type='checkbox'] {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--primary);
-  cursor: pointer;
 }
 
 .error-msg {
@@ -129,7 +96,6 @@
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  margin-top: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: background var(--transition);
@@ -146,7 +112,7 @@
   color: var(--text-muted);
 }
 
-.btn-toggle {
+.btn-link {
   color: var(--primary);
   font-weight: 600;
   text-decoration: underline;

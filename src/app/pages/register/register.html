@@ -1,0 +1,81 @@
+<div class="register-page">
+  <div class="register-card">
+    <h1>Velène</h1>
+    <p class="subtitle">Créer votre compte</p>
+
+    <form (ngSubmit)="submit()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="prenom">Prénom <span class="required">*</span></label>
+          <input
+            id="prenom"
+            type="text"
+            placeholder="Votre prénom"
+            [(ngModel)]="prenom"
+            name="prenom"
+          />
+        </div>
+        <div class="form-group">
+          <label for="nom">Nom <span class="required">*</span></label>
+          <input id="nom" type="text" placeholder="Votre nom" [(ngModel)]="nom" name="nom" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="age">Age <span class="required">*</span></label>
+          <input
+            id="age"
+            type="number"
+            placeholder="Votre age"
+            [(ngModel)]="age"
+            name="age"
+            min="1"
+            max="120"
+          />
+        </div>
+        <div class="form-group">
+          <label for="genre">Genre</label>
+          <select id="genre" [(ngModel)]="genre" name="genre">
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mail">Adresse email <span class="required">*</span></label>
+        <input
+          id="mail"
+          type="email"
+          placeholder="exemple@email.com"
+          [(ngModel)]="mail"
+          name="mail"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mot de passe <span class="required">*</span></label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Votre mot de passe"
+          [(ngModel)]="password"
+          name="password"
+        />
+      </div>
+
+      @if (errorMsg) {
+        <p class="error-msg">{{ errorMsg }}</p>
+      }
+
+      <button type="submit" class="btn-submit">Créer mon compte</button>
+    </form>
+
+    <p class="toggle-text">
+      Déjà un compte ?
+      <a routerLink="/login" class="btn-link">Se connecter</a>
+    </p>
+  </div>
+</div>
